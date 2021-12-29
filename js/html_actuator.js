@@ -49,7 +49,7 @@ HTMLActuator.prototype.clearContainer = function (container) {
 var val2caption = function(val){
 
   const captions = [
-  "미아_1013", 
+  "미아", 
   "Boo",
   "마쉬멜로우", 
   "좋은날",

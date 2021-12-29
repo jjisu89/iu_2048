@@ -80,7 +80,7 @@ var val2caption = function(val){
     idx++;
   }
   if(idx >= 0 && idx < captions.length)
-    return "<span style='font-size:smaller'>" + captions[idx]+"</span>";
+    return captions[idx];
   else
     return val;
 };

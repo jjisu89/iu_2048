@@ -15,7 +15,8 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
 
 // Restart the game
 GameManager.prototype.restart = function () {
-  window.location.reload();
+  // window.location.reload();
+  $(id_adfit).load(window.location.href + "id_adfit");
   this.storageManager.clearGameState();
   this.actuator.continueGame(); // Clear the game won/lost message
   this.setup();

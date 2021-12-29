@@ -74,7 +74,7 @@ var val2caption = function(val){
   if(idx >= 0 && idx < captions.length)
     return captions[idx];
   else
-    return val;
+    return '테스트';
 };
 
 HTMLActuator.prototype.addTile = function (tile) {

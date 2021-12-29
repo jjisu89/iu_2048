@@ -49,21 +49,21 @@ HTMLActuator.prototype.clearContainer = function (container) {
 var val2caption = function(val){
 
   const captions = [
-  "<span style='font-size:smaller'>미아</span>", 
-  "<span style='font-size:smaller'>Boo</span>",
-  "<span style='font-size:smaller'>마쉬멜로우</span>", 
-  "<span style='font-size:smaller'>좋은날</span>",
-  "<span style='font-size:smaller'>너랑나</span>",
-  "<span style='font-size:smaller'>하루 끝</span>",
-  "<span style='font-size:smaller'>분홍신</span>",
-  "<span style='font-size:smaller'>마음</span>", 
-  "<span style='font-size:smaller'>스물셋</span>", 
-  "<span style='font-size:smaller'>밤편지</span>",
-  "<span style='font-size:smaller'>팔레트</span>",
-  "<span style='font-size:smaller'>삐삐</span>",
-  "<span style='font-size:smaller'>Blueming</span>",
-  "<span style='font-size:smaller'>라일락</span>",
-  "<span style='font-size:smaller'>스베문</span>"];
+  "미아", 
+  "Boo",
+  "마쉬멜로우", 
+  "좋은날",
+  "너랑나",
+  "하루 끝",
+  "분홍신",
+  "마음", 
+  "스물셋", 
+  "밤편지",
+  "팔레트",
+  "삐삐",
+  "Blueming",
+  "라일락",
+  "스베문"];
 
   if(val <= 0) return "<span style='font-size:smaller'>Garbage</span>";
   if(val == 1){
@@ -80,7 +80,7 @@ var val2caption = function(val){
     idx++;
   }
   if(idx >= 0 && idx < captions.length)
-    return captions[idx];
+    return "<span style='font-size:smaller'>" + captions[idx]+"</span>";
   else
     return val;
 };

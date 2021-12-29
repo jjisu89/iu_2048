@@ -49,7 +49,7 @@ HTMLActuator.prototype.clearContainer = function (container) {
 var val2caption = function(val){
 
   const captions = [
-  "미아", 
+  "미아_1013", 
   "Boo",
   "마쉬멜로우", 
   "좋은날",
@@ -63,16 +63,17 @@ var val2caption = function(val){
   "삐삐",
   "Blueming",
   "라일락",
-  "스베문"];
+  "스베문",
+  "겨울잠"];
 
-  if(val <= 0) return "<span style='font-size:smaller'>Garbage</span>";
-  if(val == 1){
-    var caption = "<span style='display:inline-block;line-height:1.2;vertical-align:middle'><span class='rel'>";
-    if(window.game.relTime) caption += captions_rel[0];
-    else caption += captions_rel[1];
-    caption += "</span><br><span class='karma'>" + window.game.karma + "</span></span>";
-    return caption;
-  }
+  // if(val <= 0) return "<span style='font-size:smaller'>Garbage</span>";
+  // if(val == 1){
+  //   var caption = "<span style='display:inline-block;line-height:1.2;vertical-align:middle'><span class='rel'>";
+  //   if(window.game.relTime) caption += captions_rel[0];
+  //   else caption += captions_rel[1];
+  //   caption += "</span><br><span class='karma'>" + window.game.karma + "</span></span>";
+  //   return caption;
+  // }
   var idx = -1;
   var n = 1;
   while(n < val) {

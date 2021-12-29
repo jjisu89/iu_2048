@@ -57,7 +57,7 @@ var val2caption = function(val){
   "<span style='font-size:smaller'>Postdoc</span>",
   "<span style='font-size:smaller'>Lecturer</span>", "Reader", "Prof."];
 
-  if(val <= 0) return caption_garbage;
+  if(val <= 0) return "<span style='font-size:smaller'>Garbage</span>";
   if(val == 1){
     var caption = "<span style='display:inline-block;line-height:1.2;vertical-align:middle'><span class='rel'>";
     if(window.game.relTime) caption += captions_rel[0];
@@ -94,7 +94,7 @@ HTMLActuator.prototype.addTile = function (tile) {
 
   inner.classList.add("tile-inner");
   // inner.textContent = tile.value;
-  inner.innerHTML = val2caption(tile.value);
+  inner.textContent = val2caption(tile.value);
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first

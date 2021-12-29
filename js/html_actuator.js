@@ -48,14 +48,22 @@ HTMLActuator.prototype.clearContainer = function (container) {
 
 var val2caption = function(val){
 
-  const captions = ["커피", "Panini",
-  "Idea", "Code",
-  "<span style='display:inline-block;line-height:11px;vertical-align:middle'>Deep Learning</span>",
-  "<span style='font-size:11px;display:inline-block;line-height:11px;vertical-align:middle'>See Supervisor</span>",
-  "<span style='font-size:11px'>Experiment</span>", "Paper",
-  "<span style='font-size:11px'>Conference</span>", "Viva", "PhD",
-  "<span style='font-size:smaller'>Postdoc</span>",
-  "<span style='font-size:smaller'>Lecturer</span>", "Reader", "Prof."];
+  const captions = [
+  "<span style='font-size:smaller'>미아</span>", 
+  "<span style='font-size:smaller'>Boo</span>",
+  "<span style='font-size:smaller'>마쉬멜로우</span>", 
+  "<span style='font-size:smaller'>좋은날</span>",
+  "<span style='font-size:smaller'>너랑나</span>",
+  "<span style='font-size:smaller'>하루 끝</span>",
+  "<span style='font-size:smaller'>분홍신</span>",
+  "<span style='font-size:smaller'>마음</span>", 
+  "<span style='font-size:smaller'>스물셋</span>", 
+  "<span style='font-size:smaller'>밤편지</span>",
+  "<span style='font-size:smaller'>팔레트</span>",
+  "<span style='font-size:smaller'>삐삐</span>",
+  "<span style='font-size:smaller'>Blueming</span>",
+  "<span style='font-size:smaller'>라일락</span>",
+  "<span style='font-size:smaller'>스베문</span>"];
 
   if(val <= 0) return "<span style='font-size:smaller'>Garbage</span>";
   if(val == 1){
@@ -74,7 +82,7 @@ var val2caption = function(val){
   if(idx >= 0 && idx < captions.length)
     return captions[idx];
   else
-    return '테스트';
+    return val;
 };
 
 HTMLActuator.prototype.addTile = function (tile) {

@@ -51,7 +51,7 @@ var val2caption = function(val){
   const captions = [
   "미아", 
   "Boo",
-  "마쉬멜로우", 
+  "잔소리",
   "좋은날",
   "너랑나",
   "하루 끝",
@@ -61,7 +61,7 @@ var val2caption = function(val){
   "밤편지",
   "팔레트",
   "삐삐",
-  "Blueming",
+  "블루밍",
   "라일락",
   "스베문",
   "겨울잠"];

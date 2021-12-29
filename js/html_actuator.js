@@ -46,6 +46,37 @@ HTMLActuator.prototype.clearContainer = function (container) {
   }
 };
 
+var val2caption = function(val){
+
+  const captions = ["커피", "Panini",
+  "Idea", "Code",
+  "<span style='display:inline-block;line-height:11px;vertical-align:middle'>Deep Learning</span>",
+  "<span style='font-size:11px;display:inline-block;line-height:11px;vertical-align:middle'>See Supervisor</span>",
+  "<span style='font-size:11px'>Experiment</span>", "Paper",
+  "<span style='font-size:11px'>Conference</span>", "Viva", "PhD",
+  "<span style='font-size:smaller'>Postdoc</span>",
+  "<span style='font-size:smaller'>Lecturer</span>", "Reader", "Prof."];
+
+  if(val <= 0) return caption_garbage;
+  if(val == 1){
+    var caption = "<span style='display:inline-block;line-height:1.2;vertical-align:middle'><span class='rel'>";
+    if(window.game.relTime) caption += captions_rel[0];
+    else caption += captions_rel[1];
+    caption += "</span><br><span class='karma'>" + window.game.karma + "</span></span>";
+    return caption;
+  }
+  var idx = -1;
+  var n = 1;
+  while(n < val) {
+    n <<= 1;
+    idx++;
+  }
+  if(idx >= 0 && idx < captions.length)
+    return captions[idx];
+  else
+    return val;
+};
+
 HTMLActuator.prototype.addTile = function (tile) {
   var self = this;
 
@@ -62,7 +93,8 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = tile.value;
+  // inner.textContent = tile.value;
+  inner.innerHTML = val2caption(tile.value);
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first

@@ -49,19 +49,21 @@ HTMLActuator.prototype.clearContainer = function (container) {
 var val2caption = function(val){
 
   const captions = [
-  "좋은날", 
-  "너랑나",
-  "분홍신",
-  "마음",
-  "스물셋", 
-  "밤편지",
-  "팔레트",
-  "삐삐",
-  "블루밍",
-  "에잇",
-  "라일락",
+  "좋은날", //2
+  "너랑나", //4
+  "분홍신", //8
+  "마음",//16
+  "스물셋", //32
+  "밤편지",//64
+  "팔레트",//128
+  "삐삐",//256
+  "블루밍",//512
+  "에잇",//1024
+  "라일락",//2048
   "스베문",
-  "겨울잠"];
+  "겨울잠",
+  "미아",
+  "Boo"];
 
   // if(val <= 0) return "<span style='font-size:smaller'>Garbage</span>";
   // if(val == 1){
